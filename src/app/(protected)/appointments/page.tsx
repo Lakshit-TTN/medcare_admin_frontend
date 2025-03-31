@@ -186,21 +186,24 @@ const Appointments = () => {
                             this appointment?
                         </h3>
 
-                        {loading ? (
-                            <div className={styles.loader}></div>
-                        ) : (
-                            <div className={styles.popupButtons}>
-                                <button onClick={handleApproval} className={styles.approveButton}>
-                                    Yes
-                                </button>
-                                <button onClick={closeConfirmationDialog} className={styles.rejectButton}>
-                                    No
-                                </button>
-                                <button onClick={closeConfirmationDialog} className={styles.closeButton}>
-                                    Cancel
-                                </button>
-                            </div>
-                        )}
+                        <div className={styles.popupButtons}>
+                            {loading ? (
+                                <div className={styles.loader}></div>
+                            ) : (
+                                <>
+                                    <button onClick={handleApproval} className={styles.approveButton}>
+                                        Yes
+                                    </button>
+                                    <button onClick={closeConfirmationDialog} className={styles.rejectButton}>
+                                        No
+                                    </button>
+                                    <button onClick={closeConfirmationDialog} className={styles.closeButton}>
+                                        Cancel
+                                    </button>
+                                </>
+                            )}
+                        </div>
+
                     </div>
                 </div>
             )}
