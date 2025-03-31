@@ -1,0 +1,161 @@
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('/bg.png') no-repeat center center;
+  background-size:103% auto;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  width: 450px;
+  position: relative;
+  overflow: hidden;
+  height: 450px;
+  padding: 20px;
+  border: 1px solid #EFEFEF;
+  border-radius: 16px;
+  backdrop-filter: blur(18px);
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+
+.eyeButton {
+  position: absolute;
+  background: transparent;
+  border: none;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: #0E2515;
+  font-weight: 500;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  padding: 20px 0px;
+  font-weight: 500;
+}
+
+.card a {
+  color: #1C4A2A;
+  text-decoration: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  font-weight: 500;
+  margin: 10px 0 5px;
+  color: var(--text-muted);
+}
+
+.input {
+  padding: 20px 30px;
+  height: 40px;
+  background: white url('/emailsign.svg') no-repeat 10px;
+  background-size: 12px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+.inputP {
+  padding: 20px 30px;
+  height: 40px;
+  background: white url('/Lock.svg') no-repeat 10px;
+  background-size: 12px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  width: 100%;
+  outline: none;
+}
+
+
+.loginButton {
+  background: #1C4A2A;
+  color: white;
+  padding: 10px;
+  border: none;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.resetButton {
+  background: #C6B09A;
+  color: white;
+  padding: 10px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.forgotPassword {
+  display: block;
+  margin-top: 10px;
+  color: #0E2515;
+  text-align: center;
+  font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .container {
+    background: url('/bg.png') no-repeat center center;
+    background-size: cover; 
+    height: calc(100vh - 83px);
+    padding: 20px;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 350px;
+    margin: 10px auto; 
+  }
+  .card h2{
+    font-size: 24px;
+  }
+  .card p{
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1172px) {
+  .container {
+    background: url('/bg.png') no-repeat center center; 
+    background-size: cover;
+    height: auto;
+    padding: 40px;
+  }
+
+  .card {
+    width: 80%;
+    max-width: 400px;
+    margin: 15px auto; 
+  }
+}
+

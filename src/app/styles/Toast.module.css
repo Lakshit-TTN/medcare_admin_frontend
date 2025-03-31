@@ -1,0 +1,70 @@
+.toast {
+    position: fixed;
+    z-index: 100000000;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-out, fadeOut 0.3s ease-out 2.7s;
+  }
+  
+  .closeButton {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: color 0.2s;
+}
+
+.closeButton-btn:hover {
+    color: #ddd;
+}
+  .success {
+    background-color: #00ff4c;
+  }
+  
+  .error {
+    background-color: red;
+  }
+  
+  .info {
+    background-color: #007bff;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      top: 10px;
+    }
+    to {
+      opacity: 1;
+      top: 20px;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      top: 20px;
+    }
+    to {
+      opacity: 0;
+      top: 10px;
+    }
+  }
+  

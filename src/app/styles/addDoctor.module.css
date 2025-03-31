@@ -1,0 +1,190 @@
+.wrapper {
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(24,121,9,1) 92%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.title {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.inputgrp {
+  grid-column: span 2;
+}
+
+.file {
+  width: 100%;
+  padding: 12px;
+  color: #2c3e50;
+  background: #f9f9f9;
+  border: 2px solid #e0e0e0;  
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.input, .textarea, .select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #f9f9f9;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+}
+
+.textarea {
+  grid-column: span 2;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.genderContainer {
+  grid-column: span 2;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 20px;
+}
+
+.availabilityContainer {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.availabilityLabel {
+  display: block;
+  margin-bottom: 5px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.availabilityInputs {
+  display: flex;
+  gap: 10px;
+}
+
+.availabilityInputs .select {
+  flex: 1;
+}
+
+.availabilityInputs .input {
+  flex: 2;
+}
+
+.button {
+  grid-column: span 2;
+  padding: 12px;
+  background: rgba(24,121,9,1);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+.button:hover {
+  background: rgb(15, 75, 6);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .textarea, .inputgrp, .genderContainer, .availabilityContainer {
+    grid-column: span 1;
+  }
+
+  .radioGroup {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .availabilityInputs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .availabilityInputs .select,
+  .availabilityInputs .input {
+    flex: none;
+    width: 100%;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 12px;
+    border-radius: 15px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .radioGroup {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .availabilityInputs {
+    flex-direction: column;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,344 @@
+.container {
+  width: 900px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper {
+  background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(24, 121, 9, 1) 92%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  color: #2d4d3a;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.editForm {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.editForm input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.editForm button {
+  background: #2d4d3a;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  flex: 1;
+  text-align: center;
+}
+
+.editForm button:hover {
+  background: #1f3729;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 5px;
+  text-align: center;
+}
+
+.table th {
+  background: #2d4d3a;
+  color: white;
+  font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+.table tr:hover {
+  background: rgba(45, 77, 58, 0.1);
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.table button {
+  background: rgba(24, 121, 9, 1);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.table .deleteButton {
+  background: #dc3545;
+}
+
+.table button:hover {
+  opacity: 0.85;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background: #2d4d3a;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.pagination button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  margin: 0 10px;
+  font-weight: bold;
+  color: #2d4d3a;
+}
+
+.popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+}
+
+.popupContent {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: ease-in 0.3s ease-in-out;
+  position: relative;
+}
+
+.popupContent h3 {
+  text-align: center;
+  color: #2d4d3a;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid rgba(24, 121, 9, 0.2);
+  padding-bottom: 15px;
+}
+
+.availability {
+  min-width: 210%;
+}
+
+.popup form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.popup label {
+  display: block;
+  margin-bottom: 5px;
+  color: #2d4d3a;
+  font-weight: 600;
+}
+
+.popup input,
+.popup textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #f9f9f9;
+  transition: all 0.3s ease;
+  font-family: "Montserrat", sans-serif;  
+}
+
+.popup input:focus,
+.popup textarea:focus {
+  border-color: rgba(24, 121, 9, 0.7);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(24, 121, 9, 0.2);
+}
+
+.popup textarea {
+  grid-column: 1 / -1;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.genderContainer {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.genderContainer label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 15px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.closeButton:hover {
+  color: #dc3545;
+}
+
+.buttonGroup {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.saveButton,
+.cancelButton {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.saveButton {
+  background: rgba(24, 121, 9, 1);
+  color: white;
+}
+
+.cancelButton {
+  background: #dc3545;
+  color: white;
+}
+
+.saveButton:hover {
+  background: #218838;
+}
+
+.cancelButton:hover {
+  background: #c82333;
+}
+
+@media (max-width: 1140px) {
+  .popup form {
+    grid-template-columns: 1fr;
+  }
+
+  .genderContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .popupContent {
+    width: 95%;
+    padding: 20px;
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1px;
+}
+
+.buttonGroup button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  flex: 1;
+}
+
+.popupContent h3 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.popupContent p {
+  text-align: center;
+  color: #666;
+  font-size: 16px;
+}
+
+.popupContent .buttonGroup {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.popupContent button {
+  width: 45%;
+  padding: 10px;
+}
+
+@media (max-width: 480px) {
+  .popupContent {
+    width: 95%;
+    padding: 20px;
+  }
+}

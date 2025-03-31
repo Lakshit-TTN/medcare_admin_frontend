@@ -1,0 +1,124 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(24,121,9,1) 92%);
+  padding: 40px;
+}
+
+.header {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto; 
+  padding-bottom: 10px;
+}
+
+.totalDoctors {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: white;
+  color: #173d25;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  min-width: 280px;
+}
+
+.card {
+  background: white;
+  border-radius: 5px;
+  padding: 30px;
+  width: 280px;
+  height: 320px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.card h3 {
+  margin: 10px 0;
+  font-size: 20px;
+  color: #173d25;
+}
+
+.card p {
+  font-size: 18px;
+  color: #173d25;
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  background: #215732;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #173d25;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+
+  .header {
+    font-size: 24px;
+  }
+
+  .grid {
+    flex-wrap: wrap; 
+    justify-content: center;
+    overflow-x: visible;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .totalDoctors {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1170px) {
+  .grid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    width: 45%;
+    max-width: 280px;
+  }
+
+  .totalDoctors {
+    width: 45%;
+    max-width: 280px;
+  }
+}

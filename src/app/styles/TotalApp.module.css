@@ -1,0 +1,141 @@
+.container {
+  padding: 20px;
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(24,121,9,1) 92%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.filterContainer {
+  margin-bottom: 20px;
+  display: flex;
+  border-radius: 10px;
+  padding: 10px;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+}
+
+.filterContainer label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.filterContainer select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 2px solid rgba(24,121,9,1);
+  border-radius: 5px;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterContainer select:hover {
+  border-color:  rgba(24,121,9,1);
+}
+
+.appointmentsTableContainer {
+  width: 100%;
+  max-width: 1000px;
+  overflow-x: auto;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.appointmentsTable {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.appointmentsTable th {
+  background-color: rgba(24,121,9,1);
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.appointmentsTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.appointmentsTable td {
+  padding: 12px;
+  font-size: 14px;
+}
+
+.appointmentsTable tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.appointmentsTable tr:hover {
+  background-color: #e9ecef;
+}
+
+.pending {
+  color: orange;
+  font-weight: bold;
+}
+
+.confirmed {
+  color: green;
+  font-weight: bold;
+}
+
+.cancelled {
+  color: red;
+  font-weight: bold;
+}
+
+.noAppointments {
+  text-align: center;
+  font-size: 18px;
+  color: gray;
+  margin-top: 20px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  border: none;
+  background-color: rgba(24,121,9,1);
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 16px;
+  font-weight: bold;
+}
